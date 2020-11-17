@@ -1,2 +1,10 @@
-<h1>ERR：你无法在此页面获取任何东西哈哈哈哈</h1>
-<img src="/assets/1366x768.jpg">
+<div style="text-align: center;">
+    <h1>ERR：你无法在此页面获取任何东西哈哈哈哈</h1>
+<div style="width: 1366px; height: 768px; margin-left: auto; margin-right: auto;">
+  <nz-carousel [nzEffect]="effect" nzAutoPlay>
+    <div nz-carousel-content *ngFor="let index of array">
+      <img [src]="index" alt="" />
+    </div>
+  </nz-carousel>
+</div>
+</div>

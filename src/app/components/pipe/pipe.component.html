@@ -1,0 +1,33 @@
+<h1>Activity1 用管道转换数据</h1>
+<p>DatePipe:[{{birthday}}-------> {{ birthday | date }}]</p>
+<p>UpperCasePipe:-------> {{ "opp" | uppercase }}</p>
+<p>LowerCasePipe:-------> {{ "NTT" | lowercase }}</p>
+<p>管道串联：{{ birthday | date | uppercase }}</p>
+
+<ul>
+    <li>DatePipe</li><p style="color: burlywood;">{{birthday}}--------> {{ birthday | date }}</p>
+    <li>UpperCasePipe</li><p style="color: burlywood;">"Oracle"-------> {{ "oracle" | uppercase }}</p>
+    <li>LowerCasePipe</li><p style="color: burlywood;">"NTT"----------> {{ "NTT" | lowercase }}</p>
+</ul>
+
+<div style="width: 700px; margin-left: 5px">
+  <nz-table
+    #basicTable
+    [nzData]="explain"
+    [nzShowPagination]="false"
+    nzBordered="true"
+  >
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>explain</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of explain">
+        <td>{{ item.name }}</td>
+        <td>{{ item.explain }}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>

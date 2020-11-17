@@ -20,6 +20,9 @@ import { Activity3Directive } from './components/directive/class/activity3.direc
 import { Activity4Directive } from './components/directive/class/activity4.directive';
 import { NzRadioModule } from 'ng-zorro-antd/radio';
 import { HomeComponent } from './components/home/home.component';
+import { PipeComponent } from './components/pipe/pipe.component';
+import { NzCarouselModule } from 'ng-zorro-antd/carousel';
+import { NzTableModule } from 'ng-zorro-antd/table';
 
 registerLocaleData(zh);
 
@@ -33,6 +36,7 @@ registerLocaleData(zh);
     Activity3Directive,
     Activity4Directive,
     HomeComponent,
+    PipeComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,9 @@ registerLocaleData(zh);
     BrowserAnimationsModule,
     NzButtonModule,
     NzInputModule,
-    NzRadioModule
+    NzRadioModule,
+    NzCarouselModule,
+    NzTableModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent],
