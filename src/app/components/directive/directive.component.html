@@ -1,0 +1,26 @@
+<h1>Activity1 使用属性型指令</h1>
+<p appHighlight>佛性黄色!</p>
+<hr />
+<h1>Activity2 获取事件动态修改</h1>
+<p appActivity2>碰我下试试!</p>
+<hr />
+<h1>Activity3 使用 @Input 数据绑定向指令传递值</h1>
+<div>写死</div>
+<p appActivity3 highlightColor="yellow">今天是黄色</p>
+<div>活用</div>
+<p appActivity3 [highlightColor]="'red'">明天是热情似火的红色</p>
+<div>属性类与属性值同名时可以二合一</div>
+<p [appActivity3]="color">老子是蓝色</p>
+<hr />
+<h1>Activity4 绑定到第二个属性</h1>
+
+<nz-radio-group [(ngModel)]="unColor">
+  <label nz-radio nzValue="lightgreen">Green</label>
+  <label nz-radio nzValue="yellow">Yellow</label>
+  <label nz-radio nzValue="cyan">Cyan</label>
+  <label nz-radio nzValue="">Clear</label>
+</nz-radio-group>
+
+<p [appActivity4]="unColor">defaultColor进不来</p>
+<p [appActivity4]="unColor" defaultColor="violet">defaultColor进来了</p>
+<hr />

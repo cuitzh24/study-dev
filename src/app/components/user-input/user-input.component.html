@@ -1,0 +1,48 @@
+<h1>Activity1. 用户点击触发事件</h1>
+<button nz-button nzType="primary" (click)="onClickMe()">Click me!</button>
+<button nz-button nzType="primary" (click)="clear()">Clear!</button>
+<h2>MSG:{{ clickMessage }}</h2>
+
+<hr />
+
+<h1>Activity2.1 通过$event获取对象输入</h1>
+<!-- event调用自身 -->
+<input
+  nz-input
+  placeholder="Basic usage"
+  (keyup)="onKey($event)"
+  style="margin-left: 5px; width: 500px"
+/>
+<div style="margin-left: 5px">event.target.value: {{ activity2_1_1Value }}</div>
+<div style="margin-left: 5px">event.key: {{ activity2_1_2Value }}</div>
+<h1>Activity2.2 通过#获取对象输入</h1>
+<input
+  nz-input
+  placeholder="Basic usage"
+  #box
+  (keyup)="keyUp(box.value)"
+  style="margin-left: 5px; width: 500px"
+/>
+<p style="margin-left: 5px">Enter Value: {{ activity2_2Value }}</p>
+<hr />
+<h1>Activity3. 获取Enter事件</h1>
+
+<input
+  nz-input
+  placeholder="Basic usage"
+  #box3
+  (keyup.enter)="onEnter(box3.value)"
+  style="margin-left: 5px; width: 500px"
+/>
+<p style="margin-left: 5px">Enter Value: {{ activity3Value }}</p>
+<hr />
+<h1>Activity4. 获取Blur事件</h1>
+<input
+  nz-input
+  placeholder="Basic usage"
+  #box4
+  (blur)="update(box4.value)"
+  style="margin-left: 5px; width: 500px"
+/>
+<p style="margin-left: 5px">Enter Value: {{ activity4Value }}</p>
+<hr />
