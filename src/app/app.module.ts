@@ -23,6 +23,7 @@ import { HomeComponent } from './components/home/home.component';
 import { PipeComponent } from './components/pipe/pipe.component';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { NzTableModule } from 'ng-zorro-antd/table';
+import { Activity2Pipe } from './components/pipe/class/activity2Pipe';
 
 registerLocaleData(zh);
 
@@ -37,6 +38,7 @@ registerLocaleData(zh);
     Activity4Directive,
     HomeComponent,
     PipeComponent,
+    Activity2Pipe
   ],
   imports: [
     BrowserModule,

@@ -1,13 +1,13 @@
 <h1>Activity1 用管道转换数据</h1>
-<p>DatePipe:[{{birthday}}-------> {{ birthday | date }}]</p>
-<p>UpperCasePipe:-------> {{ "opp" | uppercase }}</p>
-<p>LowerCasePipe:-------> {{ "NTT" | lowercase }}</p>
-<p>管道串联：{{ birthday | date | uppercase }}</p>
 
 <ul>
     <li>DatePipe</li><p style="color: burlywood;">{{birthday}}--------> {{ birthday | date }}</p>
     <li>UpperCasePipe</li><p style="color: burlywood;">"Oracle"-------> {{ "oracle" | uppercase }}</p>
     <li>LowerCasePipe</li><p style="color: burlywood;">"NTT"----------> {{ "NTT" | lowercase }}</p>
+    <li>CurrencyPipe</li><p style="color: burlywood;">"100000"----------> {{ "100000" | currency:'EUR' }}</p>
+    <li>DecimalPipe</li><p style="color: burlywood;">"100000"----------> {{ "100000" | number:'4.4' }}</p>
+    <li>PercentPipe</li><p style="color: burlywood;">"0.96"----------> {{ "0.96" | percent:'4.4' }}</p>
+    <li>管道串联</li><p style="color: burlywood;">"{{ birthday | date | uppercase }}</p>
 </ul>
 
 <div style="width: 700px; margin-left: 5px">
@@ -31,3 +31,7 @@
     </tbody>
   </nz-table>
 </div>
+<hr>
+<h1>Activity2 伟大的自定义管道</h1>
+<h2>Power Booster</h2>
+    <p>Super power boost: {{2 | Activity2Pipe: 10}}</p>
